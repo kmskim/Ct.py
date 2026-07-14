@@ -3,14 +3,15 @@ present_students = ["정연", "모모", "채영", "쯔위", "사나", "나연", 
 
 
 def get_absent_student(all_array, present_array):
-    all_array.sort()
-    present_array.sort()
-    for i in all_array:
-        print("all_array[i]:", i)
-    for i in present_array:
-        print("present_array[i]:", i)
-    return
+    dict = {}   
+    for key in all_array:  # all_array의 key를 dict에 넣습니다
+        dict[key] = True
+    
+    for key in present_array:  # dict에서 key 를 하나씩 없앱니다
+        del dict[key]
 
+    for key in dict.keys():  # dict에 남아있는 key가 결석한 학생입니다
+        return key
 
 print(get_absent_student(all_students, present_students))
 
