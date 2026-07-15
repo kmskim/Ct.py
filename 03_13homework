@@ -1,0 +1,25 @@
+def is_correct_parenthesis(string):
+    #스택 큐
+        print(string)
+        if string == "()":
+            print("아")
+        return 0 
+
+print("정답 = True / 현재 풀이 값 = ", is_correct_parenthesis("(())"))
+print("정답 = False / 현재 풀이 값 = ", is_correct_parenthesis(")"))
+print("정답 = False / 현재 풀이 값 = ", is_correct_parenthesis("((())))"))
+print("정답 = False / 현재 풀이 값 = ", is_correct_parenthesis("())()"))
+print("정답 = False / 현재 풀이 값 = ", is_correct_parenthesis("((())"))
+
+# 1번 ) 시작
+# 2번 개수가 안맞음
+# 3번
+#111    000 0 
+#1110010010 = False
+# 3  4 
+#
+#1100    =True
+# 0=False
+# 10010 =False
+
+
