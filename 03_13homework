@@ -1,25 +1,20 @@
 def is_correct_parenthesis(string):
     #스택 큐
-        print(string)
-        if string == "()":
-            print("아")
-        return 0 
+    temp = []
+    for i in range(len(string)):
+        if string[i] == "(":
+            temp.append(string[i])
+        else:
+            if len(temp)==0:
+                return False
+            else:
+                temp.pop(0)
+    if len(temp) !=0:
+        return False 
+    return True
 
 print("정답 = True / 현재 풀이 값 = ", is_correct_parenthesis("(())"))
 print("정답 = False / 현재 풀이 값 = ", is_correct_parenthesis(")"))
 print("정답 = False / 현재 풀이 값 = ", is_correct_parenthesis("((())))"))
 print("정답 = False / 현재 풀이 값 = ", is_correct_parenthesis("())()"))
 print("정답 = False / 현재 풀이 값 = ", is_correct_parenthesis("((())"))
-
-# 1번 ) 시작
-# 2번 개수가 안맞음
-# 3번
-#111    000 0 
-#1110010010 = False
-# 3  4 
-#
-#1100    =True
-# 0=False
-# 10010 =False
-
-
